@@ -34,7 +34,7 @@ import Users from "../Pages/Users/Index";
 
 function PageRouting() {
   return (
-    <Router>
+    <Router basename="/hims">
       <Routes>
         <Route path={APP_ROUTES.LOGIN} element={<Login />} />
         <Route path={APP_ROUTES.DASHBOARD} element={<Dashboard />} />
@@ -46,13 +46,19 @@ function PageRouting() {
         <Route path={APP_ROUTES.IPDETAILS} element={<IPDetails />} />
         <Route path={APP_ROUTES.PATIENTDETAILS} element={<PatientDetails />} />
         <Route path={APP_ROUTES.PHARMACYORDERS} element={<PharmacyOrders />} />
-        <Route path={APP_ROUTES.DIAGNOSTICORDERS} element={<DiagnosisOrders />} />
+        <Route
+          path={APP_ROUTES.DIAGNOSTICORDERS}
+          element={<DiagnosisOrders />}
+        />
         <Route path={APP_ROUTES.ADTF} element={<Adtf />} />
         <Route path={APP_ROUTES.OTMANAGEMENT} element={<OtManagement />} />
         <Route path={APP_ROUTES.BETMANAGEMENT} element={<WardManagement />} />
         <Route path={APP_ROUTES.NURSING} element={<Nursing />} />
         <Route path={APP_ROUTES.NURSEPROFILE} element={<NurseProfile />} />
-        <Route path={APP_ROUTES.PATIENTCAREPROFILE} element={<PatientCareProfile />} />
+        <Route
+          path={APP_ROUTES.PATIENTCAREPROFILE}
+          element={<PatientCareProfile />}
+        />
         <Route path={APP_ROUTES.INVENTORY} element={<Inventory />} />
         <Route path={APP_ROUTES.EMRPATIENTS} element={<EMRPatients />} />
         <Route path={APP_ROUTES.EMRDETAILS} element={<EMRDetails />} />
@@ -71,4 +77,3 @@ function PageRouting() {
 }
 
 export default PageRouting;
-
