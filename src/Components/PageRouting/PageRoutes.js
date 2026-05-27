@@ -1,0 +1,36 @@
+const APP_ROUTES = {
+    LOGIN: "/",
+    DASHBOARD: "/dashboard",
+    DASHBOARDNEW: "/dashboard-new",
+    PATIENTS: "/patient-management",
+    APPOINTMENTS: "/appointments",
+    OPD: "/out-patients",
+    IPD: "/in-patients",
+    IPDETAILS: "/in-patient-details",
+    PATIENTDETAILS: "/patient-details",
+    BILLING: "/billing-details",
+    PHARMACYORDERS: "/pharmacyorders",
+    DIAGNOSTICORDERS: "/diagnosticorders",
+    BETMANAGEMENT: "/bet-management",
+    NURSING: "/nursing",
+    NURSEPROFILE: "/nurseprofile",
+    PATIENTCAREPROFILE: "/patient-care-profile",
+    INVENTORY: "/inventory",
+    EMRPATIENTS: "/emr-patients",
+    EMRDETAILS: "/emr-details",
+    EMERGENCY: "/emergency",
+    RADIOLOGY: "/radiology",
+    ANALYTICS: "/analytics",
+    ADTF: "/adtf",
+    OTMANAGEMENT: "/ot-management",
+    SERVICEMASTER: "/service-master",
+    REPORTS: "/reports",
+    USERS: "/users",
+    CHANGEPASSWORD: "/change-password",
+    ORDERS: "/orders",
+    PAYMENTS: "/payments",
+  
+  };
+  
+  export { APP_ROUTES };
+  
