@@ -34,6 +34,7 @@ import Charges from "./Charges";
 import TreatmentHistory from "./TreatmentHistory";
 import DischargeSummary from "./DischargeSummary";
 import ClinicalNotes from "./ClinicalNotes";
+import Billingsummary from "./Billingsummary";
 
 function IPDetails() {
   const [activeTab, setActiveTab] = useState("Overview");
@@ -61,7 +62,7 @@ function IPDetails() {
 
     { name: "Discharge Summary", icon: <FaBed /> },
 
-    // { name: "Billing", icon: <FaMoneyCheckAlt /> },
+    { name: "Billing", icon: <FaMoneyCheckAlt /> },
   ];
 
   return (
@@ -201,7 +202,10 @@ function IPDetails() {
               {activeTab === "Overview" && (
                 <div className="bg-white rounded-[22px] border border-[#e9edf5] p-5">
                   <div className="flex justify-end gap-3 mb-2">
-                    <input type="date" className="h-8 rounded-md border border-[#e5e7eb] bg-white px-4 text-[13px] font-semibold text-[#111827] outline-none focus:border-[#5b5bd6]" />
+                    <input
+                      type="date"
+                      className="h-8 rounded-md border border-[#e5e7eb] bg-white px-4 text-[13px] font-semibold text-[#111827] outline-none focus:border-[#5b5bd6]"
+                    />
                     <select className="h-8 min-w-[140px] cursor-pointer rounded-md border border-[#e5e7eb] bg-white px-4 text-[13px] font-semibold text-[#111827] outline-none focus:border-[#5b5bd6]">
                       <option>IP1</option>
                       <option>IP2</option>
@@ -209,15 +213,18 @@ function IPDetails() {
                       <option>IP4</option>
                     </select>
                   </div>
-                  <hr className="mb-2"/>
+                  <hr className="mb-2" />
                   <Overview />
                 </div>
               )}
 
               {activeTab === "Medication" && (
                 <div className="bg-white rounded-[22px] border border-[#e9edf5] p-5">
-                     <div className="flex justify-end gap-3 mb-2">
-                    <input type="date" className="h-8 rounded-md border border-[#e5e7eb] bg-white px-4 text-[13px] font-semibold text-[#111827] outline-none focus:border-[#5b5bd6]" />
+                  <div className="flex justify-end gap-3 mb-2">
+                    <input
+                      type="date"
+                      className="h-8 rounded-md border border-[#e5e7eb] bg-white px-4 text-[13px] font-semibold text-[#111827] outline-none focus:border-[#5b5bd6]"
+                    />
                     <select className="h-8 min-w-[140px] cursor-pointer rounded-md border border-[#e5e7eb] bg-white px-4 text-[13px] font-semibold text-[#111827] outline-none focus:border-[#5b5bd6]">
                       <option>IP1</option>
                       <option>IP2</option>
@@ -225,15 +232,18 @@ function IPDetails() {
                       <option>IP4</option>
                     </select>
                   </div>
-                  <hr className="mb-2"/>
+                  <hr className="mb-2" />
                   <Medication />
                 </div>
               )}
 
               {activeTab === "Labs" && (
                 <div className="bg-white rounded-[22px] border border-[#e9edf5] p-5">
-                   <div className="flex justify-end gap-3 mb-2">
-                    <input type="date" className="h-8 rounded-md border border-[#e5e7eb] bg-white px-4 text-[13px] font-semibold text-[#111827] outline-none focus:border-[#5b5bd6]" />
+                  <div className="flex justify-end gap-3 mb-2">
+                    <input
+                      type="date"
+                      className="h-8 rounded-md border border-[#e5e7eb] bg-white px-4 text-[13px] font-semibold text-[#111827] outline-none focus:border-[#5b5bd6]"
+                    />
                     <select className="h-8 min-w-[140px] cursor-pointer rounded-md border border-[#e5e7eb] bg-white px-4 text-[13px] font-semibold text-[#111827] outline-none focus:border-[#5b5bd6]">
                       <option>IP1</option>
                       <option>IP2</option>
@@ -241,15 +251,18 @@ function IPDetails() {
                       <option>IP4</option>
                     </select>
                   </div>
-                  <hr className="mb-2"/>
+                  <hr className="mb-2" />
                   <Labs />
                 </div>
               )}
 
               {activeTab === "Operation" && (
                 <div className="bg-white rounded-[22px] border border-[#e9edf5] p-5">
-                     <div className="flex justify-end gap-3 mb-2">
-                    <input type="date" className="h-8 rounded-md border border-[#e5e7eb] bg-white px-4 text-[13px] font-semibold text-[#111827] outline-none focus:border-[#5b5bd6]" />
+                  <div className="flex justify-end gap-3 mb-2">
+                    <input
+                      type="date"
+                      className="h-8 rounded-md border border-[#e5e7eb] bg-white px-4 text-[13px] font-semibold text-[#111827] outline-none focus:border-[#5b5bd6]"
+                    />
                     <select className="h-8 min-w-[140px] cursor-pointer rounded-md border border-[#e5e7eb] bg-white px-4 text-[13px] font-semibold text-[#111827] outline-none focus:border-[#5b5bd6]">
                       <option>IP1</option>
                       <option>IP2</option>
@@ -257,15 +270,18 @@ function IPDetails() {
                       <option>IP4</option>
                     </select>
                   </div>
-                  <hr className="mb-2"/>
+                  <hr className="mb-2" />
                   <Operation />
                 </div>
               )}
 
               {activeTab === "Doctor / Nurse Notes" && (
                 <div className="bg-white rounded-[22px] border border-[#e9edf5] p-5 h-[1000px] overflow-y-auto scrollHide">
-                    <div className="flex justify-end gap-3 mb-2">
-                    <input type="date" className="h-8 rounded-md border border-[#e5e7eb] bg-white px-4 text-[13px] font-semibold text-[#111827] outline-none focus:border-[#5b5bd6]" />
+                  <div className="flex justify-end gap-3 mb-2">
+                    <input
+                      type="date"
+                      className="h-8 rounded-md border border-[#e5e7eb] bg-white px-4 text-[13px] font-semibold text-[#111827] outline-none focus:border-[#5b5bd6]"
+                    />
                     <select className="h-8 min-w-[140px] cursor-pointer rounded-md border border-[#e5e7eb] bg-white px-4 text-[13px] font-semibold text-[#111827] outline-none focus:border-[#5b5bd6]">
                       <option>IP1</option>
                       <option>IP2</option>
@@ -273,7 +289,7 @@ function IPDetails() {
                       <option>IP4</option>
                     </select>
                   </div>
-                  <hr className="mb-2"/>
+                  <hr className="mb-2" />
                   {/* <ConsultantRegister/> */}
                   <ClinicalNotes />
                 </div>
@@ -281,8 +297,11 @@ function IPDetails() {
 
               {activeTab === "Nursing Notes" && (
                 <div className="bg-white rounded-[22px] border border-[#e9edf5] p-5">
-                   <div className="flex justify-end gap-3 mb-2">
-                    <input type="date" className="h-8 rounded-md border border-[#e5e7eb] bg-white px-4 text-[13px] font-semibold text-[#111827] outline-none focus:border-[#5b5bd6]" />
+                  <div className="flex justify-end gap-3 mb-2">
+                    <input
+                      type="date"
+                      className="h-8 rounded-md border border-[#e5e7eb] bg-white px-4 text-[13px] font-semibold text-[#111827] outline-none focus:border-[#5b5bd6]"
+                    />
                     <select className="h-8 min-w-[140px] cursor-pointer rounded-md border border-[#e5e7eb] bg-white px-4 text-[13px] font-semibold text-[#111827] outline-none focus:border-[#5b5bd6]">
                       <option>IP1</option>
                       <option>IP2</option>
@@ -290,15 +309,18 @@ function IPDetails() {
                       <option>IP4</option>
                     </select>
                   </div>
-                  <hr className="mb-2"/>
+                  <hr className="mb-2" />
                   <NursingNotes />
                 </div>
               )}
 
               {activeTab === "Timeline" && (
                 <div className="bg-white rounded-[22px] border border-[#e9edf5] p-5 h-[1000px] overflow-y-auto scrollHide">
-                   <div className="flex justify-end gap-3 mb-2">
-                    <input type="date" className="h-8 rounded-md border border-[#e5e7eb] bg-white px-4 text-[13px] font-semibold text-[#111827] outline-none focus:border-[#5b5bd6]" />
+                  <div className="flex justify-end gap-3 mb-2">
+                    <input
+                      type="date"
+                      className="h-8 rounded-md border border-[#e5e7eb] bg-white px-4 text-[13px] font-semibold text-[#111827] outline-none focus:border-[#5b5bd6]"
+                    />
                     <select className="h-8 min-w-[140px] cursor-pointer rounded-md border border-[#e5e7eb] bg-white px-4 text-[13px] font-semibold text-[#111827] outline-none focus:border-[#5b5bd6]">
                       <option>IP1</option>
                       <option>IP2</option>
@@ -306,15 +328,18 @@ function IPDetails() {
                       <option>IP4</option>
                     </select>
                   </div>
-                  <hr className="mb-2"/>
+                  <hr className="mb-2" />
                   <TimeLine />
                 </div>
               )}
 
               {activeTab === "Prescription" && (
                 <div className="bg-white rounded-[22px] border border-[#e9edf5] p-5">
-                   <div className="flex justify-end gap-3 mb-2">
-                    <input type="date" className="h-8 rounded-md border border-[#e5e7eb] bg-white px-4 text-[13px] font-semibold text-[#111827] outline-none focus:border-[#5b5bd6]" />
+                  <div className="flex justify-end gap-3 mb-2">
+                    <input
+                      type="date"
+                      className="h-8 rounded-md border border-[#e5e7eb] bg-white px-4 text-[13px] font-semibold text-[#111827] outline-none focus:border-[#5b5bd6]"
+                    />
                     <select className="h-8 min-w-[140px] cursor-pointer rounded-md border border-[#e5e7eb] bg-white px-4 text-[13px] font-semibold text-[#111827] outline-none focus:border-[#5b5bd6]">
                       <option>IP1</option>
                       <option>IP2</option>
@@ -322,15 +347,18 @@ function IPDetails() {
                       <option>IP4</option>
                     </select>
                   </div>
-                  <hr className="mb-2"/>
+                  <hr className="mb-2" />
                   <Prescription />
                 </div>
               )}
 
               {activeTab === "Charges" && (
                 <div className="bg-white rounded-[22px] border border-[#e9edf5] p-5">
-                    <div className="flex justify-end gap-3 mb-2">
-                    <input type="date" className="h-8 rounded-md border border-[#e5e7eb] bg-white px-4 text-[13px] font-semibold text-[#111827] outline-none focus:border-[#5b5bd6]" />
+                  <div className="flex justify-end gap-3 mb-2">
+                    <input
+                      type="date"
+                      className="h-8 rounded-md border border-[#e5e7eb] bg-white px-4 text-[13px] font-semibold text-[#111827] outline-none focus:border-[#5b5bd6]"
+                    />
                     <select className="h-8 min-w-[140px] cursor-pointer rounded-md border border-[#e5e7eb] bg-white px-4 text-[13px] font-semibold text-[#111827] outline-none focus:border-[#5b5bd6]">
                       <option>IP1</option>
                       <option>IP2</option>
@@ -338,15 +366,18 @@ function IPDetails() {
                       <option>IP4</option>
                     </select>
                   </div>
-                  <hr className="mb-2"/>
+                  <hr className="mb-2" />
                   <Charges />
                 </div>
               )}
 
               {activeTab === "Treatment History" && (
                 <div className="bg-white rounded-[22px] border border-[#e9edf5] p-5">
-                     <div className="flex justify-end gap-3 mb-2">
-                    <input type="date" className="h-8 rounded-md border border-[#e5e7eb] bg-white px-4 text-[13px] font-semibold text-[#111827] outline-none focus:border-[#5b5bd6]" />
+                  <div className="flex justify-end gap-3 mb-2">
+                    <input
+                      type="date"
+                      className="h-8 rounded-md border border-[#e5e7eb] bg-white px-4 text-[13px] font-semibold text-[#111827] outline-none focus:border-[#5b5bd6]"
+                    />
                     <select className="h-8 min-w-[140px] cursor-pointer rounded-md border border-[#e5e7eb] bg-white px-4 text-[13px] font-semibold text-[#111827] outline-none focus:border-[#5b5bd6]">
                       <option>IP1</option>
                       <option>IP2</option>
@@ -354,15 +385,18 @@ function IPDetails() {
                       <option>IP4</option>
                     </select>
                   </div>
-                  <hr className="mb-2"/>
+                  <hr className="mb-2" />
                   <TreatmentHistory />
                 </div>
               )}
 
               {activeTab === "Discharge Summary" && (
                 <div className="bg-white rounded-[22px] border border-[#e9edf5] p-5 h-[1000px] overflow-y-auto scrollHide">
-                   <div className="flex justify-end gap-3 mb-2">
-                    <input type="date" className="h-8 rounded-md border border-[#e5e7eb] bg-white px-4 text-[13px] font-semibold text-[#111827] outline-none focus:border-[#5b5bd6]" />
+                  <div className="flex justify-end gap-3 mb-2">
+                    <input
+                      type="date"
+                      className="h-8 rounded-md border border-[#e5e7eb] bg-white px-4 text-[13px] font-semibold text-[#111827] outline-none focus:border-[#5b5bd6]"
+                    />
                     <select className="h-8 min-w-[140px] cursor-pointer rounded-md border border-[#e5e7eb] bg-white px-4 text-[13px] font-semibold text-[#111827] outline-none focus:border-[#5b5bd6]">
                       <option>IP1</option>
                       <option>IP2</option>
@@ -370,16 +404,14 @@ function IPDetails() {
                       <option>IP4</option>
                     </select>
                   </div>
-                  <hr className="mb-2"/>
-              <DischargeSummary/>
+                  <hr className="mb-2" />
+                  <DischargeSummary />
                 </div>
               )}
 
               {activeTab === "Billing" && (
                 <div className="bg-white rounded-[22px] border border-[#e9edf5] p-5">
-                  <h2 className="text-lg font-bold text-blue-950">
-                    Billing Content
-                  </h2>
+                  <Billingsummary />
                 </div>
               )}
             </div>
@@ -450,7 +482,7 @@ function IPDetails() {
             </div>
 
             {/* BILLING */}
-            <div className="bg-white border border-[#e9edf5] rounded-[22px] overflow-hidden">
+            {/* <div className="bg-white border border-[#e9edf5] rounded-[22px] overflow-hidden">
               <div className="px-4 py-3 border-b border-[#edf1f7]">
                 <h2 className="text-[14px] font-bold">BILLING SUMMARY</h2>
               </div>
@@ -485,7 +517,7 @@ function IPDetails() {
                   View Billing Details
                 </button>
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
         {/* ================= TAB CONTENT ================= */}

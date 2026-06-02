@@ -20,6 +20,7 @@ import IOChart from "./IOChart";
 import CaseSheetForm from "./CaseSheetForm";
 import Summary from "./Summary";
 import DischargeSummary from "../InPatients/DischargeSummary";
+import CarePlan from "./CarePlan";
 
 function PatientCareProfile() {
   const [activeTab, setActiveTab] = useState("Vitals");
@@ -222,28 +223,31 @@ function PatientCareProfile() {
 
           {/* CARE PLAN */}
           {activeTab === "Care Plan" && (
-            <div className="grid grid-cols-2 gap-4">
-              {[
-                "Monitor vitals every 4 hours",
-                "Maintain IV fluid chart",
-                "Daily ECG monitoring",
-                "Strict diabetic diet",
-                "Bed rest with assisted mobility",
-                "Oxygen support if needed",
-              ].map((item, index) => (
-                <div
-                  key={index}
-                  className="bg-[#fafbff] border border-[#edf1f7] rounded-[16px] p-4 flex items-center gap-3"
-                >
-                  <div className="w-8 h-8 rounded-lg bg-[#eef2ff] flex items-center justify-center">
-                    <FaClipboardList className="text-[#5b5bd6] text-[12px]" />
-                  </div>
+            // <div className="grid grid-cols-2 gap-4">
+            //   {[
+            //     "Monitor vitals every 4 hours",
+            //     "Maintain IV fluid chart",
+            //     "Daily ECG monitoring",
+            //     "Strict diabetic diet",
+            //     "Bed rest with assisted mobility",
+            //     "Oxygen support if needed",
+            //   ].map((item, index) => (
+            //     <div
+            //       key={index}
+            //       className="bg-[#fafbff] border border-[#edf1f7] rounded-[16px] p-4 flex items-center gap-3"
+            //     >
+            //       <div className="w-8 h-8 rounded-lg bg-[#eef2ff] flex items-center justify-center">
+            //         <FaClipboardList className="text-[#5b5bd6] text-[12px]" />
+            //       </div>
 
-                  <p className="text-[12px] font-semibold text-[#374151]">
-                    {item}
-                  </p>
-                </div>
-              ))}
+            //       <p className="text-[12px] font-semibold text-[#374151]">
+            //         {item}
+            //       </p>
+            //     </div>
+            //   ))}
+            // </div>
+            <div>
+              <CarePlan/>
             </div>
           )}
 

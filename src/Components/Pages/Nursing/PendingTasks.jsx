@@ -1,10 +1,5 @@
 import React, { useState } from "react";
-import {
-  FaTasks,
-  FaCheck,
-  FaTimes,
-  FaEdit,
-} from "react-icons/fa";
+import { FaTasks, FaCheck, FaTimes, FaEdit } from "react-icons/fa";
 
 function PendingTasks() {
   const [openModal, setOpenModal] = useState(false);
@@ -63,6 +58,12 @@ function PendingTasks() {
 
   return (
     <div className="space-y-4">
+      <div className="flex items-center justify-end gap-3">
+        <input
+          type="date"
+          className="px-2 py-2 rounded-md border  cursor-pointer border-[#e5e7eb] text-[11px] outline-none focus:border-[#5b5bd6]"
+        />
+      </div>
       {tasksData.map((item, index) => (
         <div
           key={index}

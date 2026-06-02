@@ -1,11 +1,5 @@
 import React, { useState } from "react";
-import {
-  FaPills,
-  FaClock,
-  FaEdit,
-  FaTimes,
-  FaCheck,
-} from "react-icons/fa";
+import { FaPills, FaClock, FaEdit, FaTimes, FaCheck } from "react-icons/fa";
 
 function NurseMedication() {
   const [openModal, setOpenModal] = useState(false);
@@ -171,6 +165,10 @@ function NurseMedication() {
 
         {/* RIGHT */}
         <div className="flex items-center gap-3">
+          <input
+            type="date"
+            className="px-2 py-2 rounded-md border border-[#e5e7eb] text-[11px] outline-none focus:border-[#5b5bd6]"
+          />
           <div className="bg-green-100 text-green-600 text-[12px] font-semibold px-3 py-2 rounded-xl">
             18 Given
           </div>
@@ -190,24 +188,17 @@ function NurseMedication() {
         <div className="min-w-[860px]">
           {/* TABLE HEADER */}
           <div className="grid grid-cols-[120px_140px_repeat(4,110px)] gap-3 px-5 py-4 bg-[#f8fafc] border-b border-[#edf1f7]">
-            <h3 className="text-[12px] font-bold text-[#374151]">
-              Date
-            </h3>
+            <h3 className="text-[12px] font-bold text-[#374151]">Date</h3>
 
             <h3 className="text-[12px] font-bold text-[#374151]">
               Medicine Name
             </h3>
 
-            {["Morning", "Afternoon", "Evening", "Night"].map(
-              (time, index) => (
-                <h3
-                  key={index}
-                  className="text-[12px] font-bold text-[#374151]"
-                >
-                  {time}
-                </h3>
-              ),
-            )}
+            {["Morning", "Afternoon", "Evening", "Night"].map((time, index) => (
+              <h3 key={index} className="text-[12px] font-bold text-[#374151]">
+                {time}
+              </h3>
+            ))}
           </div>
 
           {/* CONTENT */}
@@ -317,7 +308,6 @@ function NurseMedication() {
                   Update medication administration status
                 </p>
               </div>
-
               <button
                 onClick={() => setOpenModal(false)}
                 className="w-9 h-9 rounded-lg bg-[#f4f6fb] flex items-center justify-center"

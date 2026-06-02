@@ -23,6 +23,7 @@ import {
   FiLayers,
   FiShield,
 } from "react-icons/fi";
+import { FaBed } from "react-icons/fa";
 
 function SideMenu({ collapsed }) {
   const location = useLocation();
@@ -49,6 +50,7 @@ const menuItems = [
   { title: "Emergency", path: "/emergency", icon: FiAlertTriangle },
 
   { title: "Bed & Wards", path: "/bet-management", icon: FiGrid },
+  { title: "OT Management", path: "/ot-management", icon: FaBed  },
 
   { title: "Nursing", path: "/nurseprofile", icon: FiClipboard },
 
